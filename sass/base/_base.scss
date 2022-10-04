@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Roboto;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+
+  color: var(--main-color);
+}
+
+.section {
+  text-align: center;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+
+  color: var(--main-color);
+}
