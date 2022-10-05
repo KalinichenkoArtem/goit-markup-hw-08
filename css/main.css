@@ -436,6 +436,11 @@ img {
   width: 70px;
   height: 70px;
 }
+.section-benefits__text {
+  line-height: 1.71;
+  color: var(--secondary-color);
+}
+
 .section-benefits__subtitle {
   margin-bottom: 10px;
   font-size: 14px;
@@ -444,7 +449,8 @@ img {
   text-transform: uppercase;
   color: var(--main-color);
 }
-.section-benefits__text {
-  line-height: 1.71;
-  color: var(--secondary-color);
+@media screen and (max-wight: 480px) {
+  .section-benefits__subtitle {
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */
