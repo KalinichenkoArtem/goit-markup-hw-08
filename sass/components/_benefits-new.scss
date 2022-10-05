@@ -1,14 +1,36 @@
 .section-benefits {
     padding-top: 94px;
     padding-bottom: 94px;
+    @media screen and (max-width:480px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        
+    }
 
     &__list {
         display: flex;
-
         gap: 30px;
 
         list-style-type: none;
+
+        @media screen and (max-width: 480px) {
+        display: block;   
+        }
+        @media screen and (min-width:481px) and (max-width:768px) {
+            flex-wrap: wrap;
+        }
     }
+
+    &__item {
+        @media screen and (max-width: 480px) {
+            margin-bottom: 30px;
+            
+            }  
+        @media screen and (min-width:481px) and (max-width:768px) {
+            width: calc((100% - 4 * 15px) / 2);
+            }
+                                
+        }
 
     &__svg-benefits {
         display: flex;
@@ -17,6 +39,7 @@
         margin-bottom: 30px;
 
         border-radius: 4px;
+        
         height: 120px;
 
         background-color: var(--subbackground-color);
@@ -45,7 +68,7 @@
      text-transform: uppercase;
      color: var(--main-color);
  
-     @media screen and (max-wight: 480px) {
+     @media screen and (max-width: 480px) {
          text-align: center;
      }
     }
