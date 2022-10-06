@@ -441,6 +441,12 @@ img {
   list-style-type: none;
 }
 
+@media screen and (max-width: 767px) {
+  .nav__list {
+    display: none;
+  }
+}
+
 .nav__span-header {
   font-size: 26px;
   color: var(--link-color);
@@ -454,6 +460,18 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group__link, .group__sublink {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+@media screen and (min-width: 1200px) {
+  .group__link, .group__sublink {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .nav__link:focus,
@@ -470,15 +488,22 @@ img {
 }
 
 .nav__logo-link {
+  margin-right: auto;
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--main-color);
   text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .nav__logo-link {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .nav__link,
@@ -512,14 +537,26 @@ img {
 }
 
 .group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  list-style-type: none;
+  margin-left: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: auto;
-  list-style-type: none;
+}
+@media screen and (min-width: 768px) {
+  .group {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .group__link, .group__sublink {
   display: -webkit-box;
@@ -539,10 +576,13 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) {
+  .group__link, .group__sublink {
+    padding: 5px 0px 5px 0px;
+  }
+}
 .group__icon, .group__subicon {
-  margin-right: 10px;
-  width: 16px;
-  height: 12px;
+  margin-right: 8px;
   cursor: pointer;
   fill: var(--subborder-color);
   -webkit-transition-duration: 250ms;
@@ -550,12 +590,33 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 1200px) {
+  .group__icon, .group__subicon {
+    margin-right: 10px;
+  }
+}
 .group__subicon {
   margin-right: 10px;
   width: 10px;
-  height: 16px;
+  height: 14px;
   cursor: pointer;
   fill: var(--subborder-color);
+}
+@media screen and (min-width: 1200px) {
+  .group__subicon {
+    width: 10px;
+    height: 16px;
+  }
+}
+.group__icon {
+  width: 14px;
+  height: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .group__icon {
+    width: 16px;
+    height: 12px;
+  }
 }
 .group__link:hover .group__icon, .group__link:focus .group__icon, .group__sublink:hover .group__subicon, .group__sublink:focus .group__subicon {
   fill: currentColor;
@@ -988,11 +1049,34 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style-type: none;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .buttons__list {
+    width: 326px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .buttons__list {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .buttons__list {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .buttons__item:nth-last-child(n+3) {
+    margin-bottom: 15px;
+  }
 }
 
 .buttons__hero-btn {
@@ -1045,15 +1129,41 @@ img {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .section-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 30px;
   list-style-type: none;
+}
+@media screen and (min-width: 768px) {
+  .section-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 .section-cards__hidden-text {
   width: 322px;
@@ -1087,7 +1197,20 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: start;
+}
+@media screen and (min-width: 768px) {
+  .section-cards__item {
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-cards__item {
+    width: calc((100% - 90px) / 3);
+  }
 }
 .section-cards__item:hover .card-item, .section-cards__item:focus .card-item {
   -webkit-transform: translateY(-100%);
@@ -1096,6 +1219,12 @@ img {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 767px) {
+  .section-cards__item:nth-child(-n+8) {
+    margin-bottom: 30px;
+  }
 }
 
 .section-cards__link {
@@ -1137,6 +1266,19 @@ img {
   height: 294px;
   overflow: hidden;
   background-color: var(--secondarylink-color);
+}
+
+.card-web {
+  padding: 20px 24px;
+  background: var(--white-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card-web {
+    padding-bottom: 56px;
+  }
 }
 
 .backdrop {

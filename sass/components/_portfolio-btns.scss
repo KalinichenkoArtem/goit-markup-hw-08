@@ -1,10 +1,28 @@
 .buttons__list {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-
+    flex-wrap: wrap;
     list-style-type: none;
+    margin-bottom: 40px;
+    
+    @media screen and (max-width:767px) {
+        width: 326px;
+    }
+
+    @media screen and (min-width:768px) {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
+    }
+}
+
+.buttons__item:nth-last-child(n+3) {
+    @media screen and (max-width:767px) {
+        margin-bottom: 15px;
+    }
 }
 
 .buttons__hero-btn {
