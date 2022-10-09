@@ -10,7 +10,7 @@
 
     &__list {
         display: block;
-
+        
         list-style-type: none;
 
         @media screen and (min-width: 768px) {
@@ -18,12 +18,16 @@
             flex-wrap: wrap;
         }
         @media screen and (min-width:1200px) {
+            margin-left: -30px;
             display: flex;
         }
     }
 
     &__item {
-        margin-bottom: 30px;
+        @media screen and (max-width:767px) {
+            margin-bottom: 30px;
+        }
+        
         @media screen and (min-width: 768px) {
             width: calc((100% - 4 * 15px) / 2);
             margin-left: 30px;

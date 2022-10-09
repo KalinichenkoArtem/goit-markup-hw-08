@@ -6,7 +6,7 @@
 
 .container-footer {
     display: block;
-    justify-content: center;
+    justify-content: baseline;
     text-align: center;
     align-items: center;
 
@@ -19,7 +19,9 @@
 
 .footer-contacts__list {
     list-style-type: none;
-    margin-bottom: 60px;
+    @media screen and (max-width:1199px) {
+        margin-bottom: 60px;
+    }
 }
 
 .footer-contacts__span {
@@ -94,7 +96,10 @@
 }
 
 .footer-social-webs {
-    margin-bottom: 60px;
+    @media screen and (max-width:767px) {
+        margin-bottom: 60px;
+    }
+    
     @media screen and (min-width:1200px) {
         margin-left: 70px;
     }
@@ -218,6 +223,7 @@
 .container-footer__thumb {
     @media screen and (min-width:768px) {
     display: flex;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
+    align-items: baseline; 
     }
 }
