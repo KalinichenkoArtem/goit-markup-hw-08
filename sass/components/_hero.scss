@@ -26,9 +26,9 @@
         align-items: center;
         margin: auto;
         margin-bottom: 30px;
-
-        width: 360px;
-
+        
+        width: 100%;
+        
         font-weight: 900;
         font-size: 26px;
         line-height: 1.42;
@@ -37,6 +37,10 @@
         text-transform: uppercase;
         color: var(--white-color);
         background-image: url(.../images/);
+
+        @media screen and (min-width:768px) {
+            width: 360px;
+        }
 
         @media screen and (min-width:1200px) {
             width: 696px;

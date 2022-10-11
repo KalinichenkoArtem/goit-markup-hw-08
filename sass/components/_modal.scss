@@ -190,12 +190,17 @@ textarea {
     }
 
     &__link-terms {
-        font-size: 14px;
-        line-height: 1.71;
+        font-size: 12px;
+        line-height: 1.17;
         letter-spacing: 0.03em;
 
         text-decoration-line: underline;
         color: var(--link-color);
+
+        @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+        }
     }
 
     &__icons-check {
@@ -205,9 +210,14 @@ textarea {
 
     &__span {
         margin-left: 8.38px;
-        font-size: 14px;
-        line-height:1.71;
+        font-size: 12px;
+        line-height: 1.17;
         letter-spacing: 0.03em;
+        
+        @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+        }
     }
 
     &__icon-check,
